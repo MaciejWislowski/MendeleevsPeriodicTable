@@ -1,0 +1,85 @@
+@font-face {
+    font-family: chernobyl;
+    src: url("../fonts/chernobyl/Chernobyl.otf");
+}
+@keyframes navbar_opacity {
+    0%   {opacity: 0;}
+    50%  {opacity: 0.5;}
+    100% {opacity: 1;}
+  }
+
+article {
+    width: 90%;
+    margin-left: 5%;
+}
+body {
+    background-color: rgba(38, 37, 102, 1);
+    background-clip: border-box;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 120%;
+    text-align: justify;
+}
+
+button {
+    font-family: chernobyl;
+    font-size: 200%;
+    display: block;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    box-shadow: 5px 5px 5px rgba(38, 37, 102, 0.8);
+    background: rgb(61, 60, 143);
+    opacity: 1;
+    animation-name: navbar_opacity;
+    -moz-animation-delay: 2s;
+    animation-duration: 12s;
+    width: 90%;
+}
+button:hover {
+    background: rgb(37, 37, 66)
+}
+footer {
+    background-color: rgba(38, 37, 102, 1);
+    clear: both;
+    position: absolute;
+    bottom: 0;
+    height: 5vh;
+    width: 100%;
+    text-align: center;
+}
+main {
+
+    display: block;
+}
+nav {
+    display: block;
+    float: right;
+    height: 95vh;
+    width: 20%;
+    clear: right;
+}
+section {
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(38, 37, 102, 1)), url("../pic/chem.jpg");
+    background-size: auto 100%;
+    background-position: center;
+    background-clip: content-box;
+    background-origin: content-box;
+    display: block;
+    float: left;
+    width: 80%;
+    height: 95vh;
+}
+video {
+    float: center;
+}
+.nav_button {
+    margin-bottom: 25vh;
+}
+.screen_one {
+    display: none;
+}
+.screen_two {
+    display: none;
+}
