@@ -3,9 +3,7 @@ Interactive website present Mendeleev's Periodic Table
 
 #Updates:
 
-Version 0.9
-
-1. Add 5 tabs:
+<u>Version 0.9 </u> adds 5 tabs:
  * Overview - Basic info about periodic table;
  * History - Move about history of table;
  * Interactive periodic table of elements;
