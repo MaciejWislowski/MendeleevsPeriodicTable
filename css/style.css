@@ -1,12 +1,27 @@
+/*--------------------------------------------------------------------------*/
+/*------------------------ Fonts & Animations ------------------------------*/
+/*--------------------------------------------------------------------------*/
+
 @font-face {
     font-family: chernobyl;
     src: url("../fonts/chernobyl/Chernobyl.otf");
 }
 @keyframes navbar_opacity {
     0%   {opacity: 0;}
-    50%  {opacity: 0.5;}
     100% {opacity: 1;}
   }
+
+@keyframes navbar_margin {
+    0%   {margin-bottom: 0vh;}
+    100% {margin-bottom: 10vh}
+}
+
+
+/*--------------------------------------------------------------------------*/
+/*----------------------------- Selectors ----------------------------------*/
+/*--------------------------------------------------------------------------*/
+
+/*------------------------ Semantic selectors ------------------------------*/
 
 article {
     width: 90%;
@@ -15,41 +30,29 @@ article {
 body {
     background-color: rgba(38, 37, 102, 1);
     background-clip: border-box;
-    color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 120%;
     text-align: justify;
-}
-
-button {
-    font-family: chernobyl;
-    font-size: 200%;
-    display: block;
-    border: none;
-    border-radius: 10px;
-    padding: 5px 10px;
-    box-shadow: 5px 5px 5px rgba(38, 37, 102, 0.8);
-    background: rgb(61, 60, 143);
-    opacity: 1;
-    animation-name: navbar_opacity;
-    -moz-animation-delay: 2s;
-    animation-duration: 12s;
-    width: 90%;
-}
-button:hover {
-    background: rgb(37, 37, 66)
+    max-width: 1800px;
+    min-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 footer {
     background-color: rgba(38, 37, 102, 1);
+    font-family: chernobyl;
     clear: both;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     height: 5vh;
     width: 100%;
     text-align: center;
 }
+footer p {
+    animation-name: navbar_opacity;
+    animation-duration: 12s;
+}
 main {
-
     display: block;
 }
 nav {
@@ -71,15 +74,369 @@ section {
     width: 80%;
     height: 95vh;
 }
+
+/*----------------------------- Buttons ------------------------------------*/
+button {
+    font-family: chernobyl;
+    font-size: 200%;
+    display: block;
+    border: none;
+    border-radius: 15px;
+    padding: 5px 10px;
+    background: rgb(61, 60, 143);
+    opacity: 1;
+    width: 90%;
+
+}
+
+button:hover {
+    box-shadow: 30px 10px 5px rgba(21, 19, 46, 0.795);
+    z-index: 1;
+
+}
+button:active {
+    z-index: 1;
+    background: rgba(61, 60, 143, 0.432);
+}
+
+/*-----------------------------Text-area -----------------------------------*/
+textarea {
+    width:100%;
+}
+
+/*------------------------------- Media ------------------------------------*/
 video {
     float: center;
 }
-.nav_button {
-    margin-bottom: 25vh;
+
+/*----------------------------- Headings -----------------------------------*/
+h1 {
+    text-align: center;
+    font-family: chernobyl;
+    font-size: 200%;
 }
-.screen_one {
+
+/*--------------------------------------------------------------------------*/
+/*---------------------------- Classes -------------------------------------*/
+/*--------------------------------------------------------------------------*/
+
+/*---------------------- PT's elements settings ----------------------------*/
+.atom {
+    background-color: rgba(255, 255, 255, 0.6); 
+}
+.atom:hover {
+    background-color: rgba(255, 255, 255, 0.9); 
+    box-shadow: 5px 5px 5px rgba(21, 19, 46, 0.795);
+}
+.atom_n {
+    font-size: 50%;
+    text-align: left;
+    margin-left: 10%;
+}
+.element {
+    font-size: 100%;
+    text-align: center;
+    margin-left: 10%;
+    color: red;
+}
+.mass_n {
+    font-size: 50%;
+    text-align: left;
+    margin-left: 10%;
+}
+.name {
+    font-family: Georgia, 'Times New Roman', Times, serif;
     display: none;
+    font-size: 40%;
+    font-weight: 50;
+    color: red;
+    margin-left: 0%;
+    margin-right: 0%;
 }
-.screen_two {
+
+.atom:hover > .name {
+    display: block;
+}
+
+
+
+/*------------------------ PT's Grid settings -----------------------------*/
+
+.grid-container {
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+    grid-gap: 5px;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 0px;
+    max-height: 80vh;
+    margin-bottom: 2%;
+}
+.grid-container2 {
+    font-size: 45%;
+    border-radius: 10px;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns:  auto auto auto auto auto;
+    padding: 0px 0px;
+    margin-bottom:2%;
+}
+.grid-container3 {
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+    grid-gap: 5px;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 0px;
+    margin-bottom: 8%;
+}
+  
+.grid-container > div {
+    text-align: center;
+    line-height: 30%;
+    border-radius: 5px;
+}
+.grid-container3 > div {
+    text-align: center;
+    line-height: 30%;
+    border-radius: 5px;
+}
+.grid-container > div:hover {
+    text-align: center;
+    border-radius: 5px;
+}
+.grid-container3 > div:hover {
+    text-align: center;
+    border-radius: 5px;
+}
+
+/*------------------------ Nav buttons settings ----------------------------*/
+.batonik {
+    animation-name: navbar_margin;
+    animation-duration: 2s;
+    margin-bottom: 10vh;
+}
+.batonik:last-child {
+    animation-name: navbar_margin;
+    animation-duration: 2s;
+}
+
+/*------------------------ Picutures settings ------------------------------*/
+.img {
+    border-radius: 15px;
+}
+
+/*----------------------------- About me -----------------------------------*/
+.aboutMe {
+    margin: 5%;
+}
+
+.ct {
+    margin: 0% 5%;
+}
+
+
+/*------------------------------- Atoms ------------------------------------*/
+/*-- Alkali Metals --*/
+.g1-h {
+    background-color: rgba(172, 118, 17, 0.3);    
+}
+.g1-active {
+    background-color: rgba(172, 118, 17, 0.6);    
+}
+.g1-active:hover {
+    background-color: rgba(172, 118, 17, 0.9);    
+}
+
+/*-- Alkaline earth metals --*/
+.g2-h {
+    background-color: rgba(220, 231, 58, 0.3);    
+}
+.g2-active {
+    background-color: rgba(220, 231, 58, 0.6);    
+}
+.g2-active:hover {
+    background-color: rgba(220, 231, 58, 0.9);    
+}
+
+/*-- Lanthanoids --*/
+.g3-h {
+    background-color: rgba(187, 53, 169, 0.3);    
+}
+.g3-active {
+    background-color: rgba(187, 53, 169, 0.6);     
+}
+.g3-active:hover {
+    background-color: rgba(187, 53, 169, 0.9);     
+}
+
+/*-- Actinoids --*/
+.g4-h {
+    background-color: rgba(187, 53, 104, 0.3);    
+}
+.g4-active {
+    background-color: rgba(187, 53, 104, 0.6);     
+}
+.g4-active:hover {
+    background-color: rgba(187, 53, 104, 0.9);     
+}
+
+/*-- Transition metals --*/
+.g5-h {
+    background-color: rgba(187, 102, 53, 0.3);    
+}
+.g5-active {
+    background-color: rgba(187, 102, 53, 0.6);     
+}
+.g5-active:hover {
+    background-color: rgba(187, 102, 53, 0.9);     
+}
+/*-- Post-transition metals --*/
+.g6-h {
+    background-color: rgba(124, 187, 53, 0.3);    
+}
+.g6-active {
+    background-color: rgba(124, 187, 53, 0.6);     
+}
+.g6-active:hover {
+    background-color: rgba(124, 187, 53, 0.9);     
+}
+
+/*-- Metalloids --*/
+.g7-h {
+    background-color: rgba(53, 187, 86, 0.3);    
+}
+.g7-active {
+    background-color: rgba(53, 187, 86, 0.6);     
+}
+.g7-active:hover {
+    background-color: rgba(53, 187, 86, 0.9);     
+}
+
+/*-- Other nonmetals --*/
+.g8-h {
+    background-color: rgba(53, 187, 169, 0.3);    
+}
+.g8-active {
+    background-color: rgba(53, 187, 169, 0.6);     
+}
+.g8-active:hover {
+    background-color: rgba(53, 187, 169, 0.9);     
+}
+
+/*-- Noble gases --*/
+.g9-h {
+    background-color: rgba(53, 84, 187, 0.3);    
+}
+.g9-active {
+    background-color: rgba(53, 84, 187, 0.6);     
+}
+.g9-active:hover {
+    background-color: rgba(53, 84, 187, 0.9);     
+}
+
+/*-- Noble gases --*/
+.g10-h {
+    background-color: rgba(139, 137, 139, 0.3);    
+}
+.g10-active {
+    background-color: rgba(139, 137, 139, 0.6);     
+}
+.g10-active:hover {
+    background-color: rgba(139, 137, 139, 0.9);     
+}
+
+/*------------------------------- Font Awesome -------------------------------*/
+.fas {
+    color: black;
+}
+.fas:hover {
+    color: white;
+}
+.fab {
+    color: black;
+}
+.fab:hover {
+    color: white;
+}
+
+/*--------------------------------------------------------------------------*/
+/*------------------------------- ID's -------------------------------------*/
+/*--------------------------------------------------------------------------*/
+
+/*------------------------------- Navi -------------------------------------*/
+#tab1 {
+    background-color: rgba(255, 255, 255, 0.5);
     display: none;
+    width: 80%;
+    padding: 5%;
+    animation-name: navbar_opacity;
+    animation-duration: 2s;
+    border-radius: 10px;
 }
+#tab2 {
+    display: none;
+    height: 80vh;
+    animation-name: navbar_opacity;
+    animation-duration: 2s;
+}
+#tab3 {
+    display: none;
+    animation-name: navbar_opacity;
+    animation-duration: 2s;
+}
+#tab4 {
+    display: none;
+    animation-name: navbar_opacity;
+    animation-duration: 2s;
+    background-color: rgba(255, 255, 255, 0.5);
+    min-height: 90vh;
+    border-radius: 10px;
+}
+#tab5 {
+    display: none;
+    animation-name: navbar_opacity;
+    animation-duration: 2s;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding-bottom: 2%;
+    border-radius: 10px;
+}
+
+
+/*----------------------------- Pictures -----------------------------------*/
+#img1 {
+    float: left; 
+    margin-right: 5%;
+    width: 30%;
+}
+#img2 {
+    float: left; 
+    margin: 0% 5%;
+    width: 45%;
+    margin-bottom: 30%; 
+}
+#img3 {
+    float: left; 
+    margin: 0% 5%;
+    width: 30%; 
+}
+
+
+
+
+/*-------------------------------- Forms ---------------------------------------*/
+#form1 {
+    margin: 5% 5%;
+    clear: both;
+}
+
+#butt16 {
+    width: 100%;
+}
+
+#ct1 {
+    margin: 2% 5%;
+}
+
+
+
